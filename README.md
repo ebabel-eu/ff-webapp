@@ -1,4 +1,4 @@
-#FF React Webapp
+#FF Web app
 
 ## Local Development:
 
@@ -20,10 +20,10 @@ npm run dev
 
 #### BUILD
 ```
-docker build -t react-tutorials .
+docker build -t ffwebapp .
 ```
 
 #### PRODUCTION START
 ```
-docker run -p 8080:8080 --rm -it -e NODE_ENV=production react-tutorials
+docker run -p 8080:8080 --rm -it -e NODE_ENV=production ffwebapp
 ```
