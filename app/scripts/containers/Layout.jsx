@@ -1,28 +1,29 @@
 import config from '../../config/default';
 import React, { Component, PropTypes } from 'react';
-import Header from './Header.jsx';
-import Footer from './Footer.jsx';
+import Nav from '../components/Nav.jsx';
 import { connect } from 'react-redux';
 
 class Layout extends Component {
   static defaultProps = {
-    appName: config.appName
+    appName: config.appName,
+    navSections: config.navSections
   };
+
   static propTypes = {
     appName: PropTypes.string.isRequired,
     children: PropTypes.object.isRequired,
-    history: PropTypes.object
+    history: PropTypes.object.isRequired,
+    navSections: PropTypes.array.isRequired
   };
+
   render () {
-    console.log(this.props);
-    const { children, appName, history } = this.props;
+    const { children, appName, history, navSections } = this.props;
     return (
       <div>
-        <Header appName={appName} history={history}/>
-        <div className='container'>
+        <Nav appName={appName} history={history} navSections={navSections}/>
+        <div className='container-fluid'>
           {children}
         </div>
-        <Footer appName={appName}/>
       </div>
     );
   }
