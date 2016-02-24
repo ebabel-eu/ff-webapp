@@ -22,14 +22,21 @@ module.exports = {
   devtool: debug ? 'inline-sourcemap' : null,
   entry: './scripts/client.jsx',
   module: {
-    loaders: [{
-      test: /\.jsx?$/,
-      exclude: /(node_modules|bower_components)/,
-      loader: 'babel-loader'
-    }]
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      }
+    ]
   },
   output: {
     path: path.join(__dirname, 'dist'),
+    publicPath: 'assets/',
     filename: 'scripts/client.min.js'
   },
   plugins: pluginsArray

@@ -1,3 +1,4 @@
+import config from '../config/default';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Layout from './containers/Layout.jsx';
@@ -9,13 +10,20 @@ import reducers from './reducers';
 
 const store = createStore(reducers);
 
+require('../styles/main.css');
+
+const routes = config.navSections.map((item, index) => {
+  return (
+    <Route key={index} path={item.url} name={item.name} component={Content}/>
+  );
+});
+
 ReactDOM.render(
   <Provider store={store}>
     <Router history={hashHistory}>
       <Route path='/' component={Layout}>
         <IndexRoute name='Index' component={Content}/>
-        <Route path='inventory' name='Inventory' component={Content}/>
-        <Route path='character' name='Character' component={Content}/>
+        {routes}
       </Route>
     </Router>
   </Provider>,

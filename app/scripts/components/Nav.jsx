@@ -25,10 +25,9 @@ export default class Nav extends Component {
   render () {
     const { appName, navSections } = this.props;
     const items = this.createNavItem(navSections);
-    console.log(items);
     return (
       <header className='navbar navbar-fixed-bottom'>
-        <div className='container'>
+        <div className='container-fluid'>
           <Link to='/' className='navbar-brand'>{appName}</Link>
             <ul className='nav navbar-nav'>
               {items}
