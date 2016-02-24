@@ -10,13 +10,13 @@ import reducers from './reducers';
 
 const store = createStore(reducers);
 
-require('../styles/main.css');
-
 const routes = config.navSections.map((item, index) => {
   return (
     <Route key={index} path={item.url} name={item.name} component={Content}/>
   );
 });
+
+require('../styles/main.less');
 
 ReactDOM.render(
   <Provider store={store}>
