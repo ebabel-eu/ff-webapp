@@ -1,7 +1,7 @@
 {
   "name": "ff-webapp",
   "version": "0.0.0",
-  "description": "Finting Fantasy Web App with React & Redux",
+  "description": "Fighting Fantasy Web App with React & Redux",
   "main": "webpack.config.js",
   "dependencies": {
     "babel-loader": "6.2.0",

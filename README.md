@@ -1,4 +1,4 @@
-#FF Web app
+# Fighting Fantasy Web app
 
 ## Local Development:
 

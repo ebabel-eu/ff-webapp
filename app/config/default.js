@@ -1,5 +1,5 @@
 module.exports = {
-  appName: 'FF Webapp',
+  appName: 'fighting fantasy Web App',
   navSections: [
     {
       name: 'Character',
