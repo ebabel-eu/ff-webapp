@@ -16,8 +16,6 @@ const routes = config.navSections.map((item, index) => {
   );
 });
 
-require('../styles/main.less');
-
 ReactDOM.render(
   <Provider store={store}>
     <Router history={hashHistory}>

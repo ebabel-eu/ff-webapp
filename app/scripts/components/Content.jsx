@@ -11,7 +11,7 @@ export default class Content extends Component {
     const pageTitle = post || name;
     return (
       <div className='content'>
-        <h1>{pageTitle}</h1>
+        <h1 className='page-title'>{pageTitle}</h1>
       </div>
     );
   }

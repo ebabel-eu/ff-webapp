@@ -13,11 +13,9 @@ export default class NavItem extends Component {
     const { name, url, icon, active } = this.props;
     const activeClassName = active ? 'active' : '';
     return (
-      <li className={`nav-item ${activeClassName}`}>
-        <Link className='nav-link' to={url} title={name}>
-          <Icon symbol={icon} />
-        </Link>
-      </li>
+      <Link className={ `nav-link ${activeClassName}` } to={url} title={name}>
+        <Icon symbol={icon} />
+      </Link>
     );
   }
 }
