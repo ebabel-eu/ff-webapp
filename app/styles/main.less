@@ -1,11 +1,14 @@
-@white: #FFF;
-@grey: #CCC;
-@black: #000;
+/*
+  FF webApp styles
+  Author: Didier Chartrain
+*
+/
+/* http://furtive.co/ */
+@import '../../node_modules/furtive/css/furtive.css';
 
-.icon {
-  fill: @grey;
-  
-  .active & {
-    fill: @black;
-  }
-}
+@import 'utils/variables';
+@import 'utils/generics';
+
+@import 'components/topbar';
+@import 'components/nav';
+@import 'components/content';

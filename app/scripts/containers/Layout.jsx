@@ -1,6 +1,7 @@
 import config from '../../config/default';
 import React, { Component, PropTypes } from 'react';
 import Nav from '../components/Nav.jsx';
+import TopBar from '../components/TopBar.jsx';
 import { connect } from 'react-redux';
 
 class Layout extends Component {
@@ -17,13 +18,14 @@ class Layout extends Component {
   };
 
   render () {
-    const { children, appName, history, navSections } = this.props;
+    const { appName, children, history, navSections } = this.props;
     return (
       <div>
-        <Nav appName={appName} history={history} navSections={navSections}/>
+        <TopBar text={appName}/>
         <div className='container-fluid'>
           {children}
         </div>
+        <Nav history={history} navSections={navSections}/>
       </div>
     );
   }

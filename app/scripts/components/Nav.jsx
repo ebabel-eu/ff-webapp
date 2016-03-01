@@ -1,10 +1,8 @@
 import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
 import NavItem from './NavItem.jsx';
 
 export default class Nav extends Component {
   static propTypes = {
-    appName: PropTypes.string.isRequired,
     history: PropTypes.object.isRequired,
     navSections: PropTypes.array.isRequired
   };
@@ -23,17 +21,12 @@ export default class Nav extends Component {
   };
 
   render () {
-    const { appName, navSections } = this.props;
+    const { navSections } = this.props;
     const items = this.createNavItem(navSections);
     return (
-      <header className='navbar navbar-fixed-bottom'>
-        <div className='container-fluid'>
-          <Link to='/' className='navbar-brand'>{appName}</Link>
-            <ul className='nav navbar-nav'>
-              {items}
-            </ul>
-        </div>
-      </header>
+      <footer className='nav'>
+        {items}
+      </footer>
     );
   }
 }

@@ -26,8 +26,8 @@ export default class Icon extends Component {
     const { fill, symbol } = this.props;
     return (
       <svg className='icon'
-        width='30'
-        height='30'
+        width='35'
+        height='35'
         role='img'
         version='1.1'
         viewBox='0 0 50 50'
