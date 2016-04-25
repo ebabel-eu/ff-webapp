@@ -1,17 +1,16 @@
 # Fighting Fantasy Web app
 
-## Local Development:
+## Local Development
 
-#### BUILD
+### Build
 
 ```
 npm install
 webpack
 ```
 
-#### DEVELOPMENT START
+### Development
 
 ```
 http-server build/
 ```
-

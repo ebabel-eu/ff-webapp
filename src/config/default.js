@@ -1,25 +1,25 @@
-module.exports = {
+export default {
   appName: 'Fighting Fantasy Web App',
   navSections: [
     {
       name: 'Character',
       icon: 'dice',
-      url: '/character'
+      url: '/character',
     },
     {
       name: 'Inventory',
       icon: 'backpack',
-      url: '/inventory'
+      url: '/inventory',
     },
     {
       name: 'Fight',
       icon: 'battle',
-      url: '/fight'
+      url: '/fight',
     },
     {
       name: 'Setting',
       icon: 'setting',
-      url: '/setting'
-    }
-  ]
+      url: '/setting',
+    },
+  ],
 };
