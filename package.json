@@ -2,7 +2,7 @@
   "name": "ff-webapp",
   "version": "1.0.0",
   "description": "Fighting Fantasy Web App with React & Redux",
-  "main": "webpack.config.js",
+  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ebabel-eu/ff-webapp.git"
@@ -44,7 +44,7 @@
   },
   "scripts": {
     "postinstall": "node ./node_modules/webpack/bin/webpack.js -p --config ./webpack.config.js --progress --colors",
-    "start": "node index.js",
+    "start": "http-server build/",
     "test": "karma start --single-run",
     "text-watch": "karma start"
   },
